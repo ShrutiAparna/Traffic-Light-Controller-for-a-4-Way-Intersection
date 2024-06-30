@@ -1,0 +1,10 @@
+The code for a Traffic Light Controller uses a Finite State Machine (FSM) to control a four-way traffic intersection with north, south, east, and west directions. 
+
+- Inputs: “clk” (clock signal) and `rst_a` (reset signal).
+- Outputs: 3-bit signals for lights in each direction (`n_lights`, `s_lights`, `e_lights`, `w_lights`).
+The FSM cycles through the following sequence of light states for each direction:
+- Green light ("001") for 8 clock cycles.
+- Yellow light ("010") for 4 clock cycles.
+- Red light ("100") as the default state.
+
+The FSM transitions between north, south, east, and west states in order, and the cycle repeats. On reset, the FSM starts in the north state.
